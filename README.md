@@ -11,4 +11,4 @@ Links attached to images and icons
 https://masonmccoy.github.io/digital-portfolio/
 
 ## Screenshot
-
+https://github.com/MasonMcCoy/digital-portfolio/blob/main/images/site-screenshot.PNG
