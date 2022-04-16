@@ -15,7 +15,6 @@ body {
 h1 {
     display: inline-block;
     font-size: 75px;
-    background-color: var(--section-color);
     padding: 10px;
 }
 
@@ -37,6 +36,7 @@ header {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    background-color: var(--section-color);
     margin: 10px 20px 50px;
 }
 
@@ -44,7 +44,6 @@ nav {
     float: right;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
-    background-color: var(--section-color)
 }
 
 nav ul {
@@ -161,19 +160,22 @@ footer a {
 
 /* Media Queries */
 @media (max-width: 1250px) {
-    header {
-        align-items: stretch;
-        justify-content: space-around;
+    nav ul {
+        display: flex;
+        flex-direction: column;
     }
 }
 
 
 @media (max-width: 1024px) {
     header {
-        display: flex;
         justify-content: space-between;
     }
     
+    h1 {
+        width: 50%;
+    }
+
     h2 {
         text-align: center;
         margin: 20px 0;
@@ -213,6 +215,7 @@ footer a {
 
     #contact-me h2 {
         flex: 0.75;
+        text-align: center;
     }
 
     #contact-me p {
@@ -230,12 +233,12 @@ footer a {
     }
 
     #contact-me p {
-        font-size: 1rem;
+        font-size: 1.5rem;
         padding: 0;
     }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 600px) {
     /* Stack navbar on top of each other. */
     header {
         flex-direction: column;
@@ -251,6 +254,7 @@ footer a {
     /* Turn project-grid into a column */
     #project-grid {
         grid-template-columns: 1fr;
+        /* grid-template-rows: 10% 10% 10% 10%; */
     }
 
     /* Figure out how to make grid articles smaller */
