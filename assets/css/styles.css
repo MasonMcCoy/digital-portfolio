@@ -28,8 +28,7 @@ h2 {
 
 h3 {
     font-size: 30px;
-    padding-top: 10px;
-    padding-left: 10px;
+    background-color: white;
 }
 
 header {
@@ -109,21 +108,25 @@ article h3 {
 
 /* About Me Section */
 #about-me {
-    justify-content: space-between;
+    align-items: center;
 }
 
-#about-me div {
-    flex: 0.75;
+#about-me-bio {
+    flex: 1.5;
 }
 
-#about-me div img {
-    width: 100%;
-}
-
-#about-me p {
-    flex: 1.25;
+#about-me-bio p {
     background: white;
     margin-left: 10px;
+}
+
+#about-me-img {
+    flex: 0.5;
+}
+
+#about-me-img img {
+    width: 100%;
+    border: 2px black solid;
 }
 
 /* Project Work Section */
@@ -159,10 +162,28 @@ footer a {
 }
 
 /* Media Queries */
+@media (max-width: 1500px) {
+    #about-me-img {
+        flex: 0.75;
+    }
+    
+    #about-me-bio {
+        flex: 1.25;
+    }
+}
+
 @media (max-width: 1250px) {
     nav ul {
         display: flex;
         flex-direction: column;
+    }
+
+    #about-me-img {
+        flex: 0.95;
+    }
+    
+    #about-me-bio {
+        flex: 1.05;
     }
 }
 
@@ -185,25 +206,12 @@ footer a {
         width: 100%;
     }
 
+    /* OLD CSS */
     #about-me {
         flex-direction: column;
         align-items: center;
     }
 
-    #about-me img {
-        width: 75%;
-        border: 2px solid black;
-        margin-bottom: 10px;
-    }
-
-    #about-me h2 {
-        width: 100%;
-    }
-
-    #about-me p {
-        width: 100%;
-    }
-    
     #my-project-work {
         flex-direction: column;
         /* align-items: center; */
@@ -224,7 +232,6 @@ footer a {
 
 }
 
-
 @media (max-width: 972px) {
     /* Stack contact info on top of each other. */
     #contact-me {
@@ -242,8 +249,15 @@ footer a {
     /* Stack navbar on top of each other. */
     header {
         flex-direction: column;
+        text-align: center;
+        align-items: center;
     }
     
+    h1 {
+        background-color: var(--body-color);
+        width: 100%;
+    }
+
     /* Fix the Header fonts */
     h2 {
         font-size: 30px;
@@ -256,6 +270,4 @@ footer a {
         grid-template-columns: 1fr;
         /* grid-template-rows: 10% 10% 10% 10%; */
     }
-
-    /* Figure out how to make grid articles smaller */
 }
